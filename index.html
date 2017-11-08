@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<style type="text/css">
+
+html, a {text-decoration:none;}
+
+div {margin:0 auto 10px auto; height:200px; width:200px}
+
+h1 {font: normal 90px Helvetica, Sans-Serif; 
+letter-spacing: 0.5px; 
+line-height:1px; 
+position: relative;
+top:100px;
+text-align: center;
+margin: 0;
+left:0;
+right:0;
+font-weight: 800;
+color:#000000}
+
+
+.popup {
+position: absolute;
+top: 0;
+padding-top:30px;
+width: 100%;
+height: 100%;
+display: none;
+text-align:center;
+background-color:#1D3AD1;
+z-index: 200;
+opacity:1;  
+}
+
+.popup:target {
+display: block;
+-webkit-animation-name: fadein 0,2s; 
+animation-name: fadein;
+animation-duration: 0.2s;
+}
+.popup img {
+padding: 4px;
+width: 80%;
+z-index: 120;
+border: solid 1px gray;
+cursor: pointer;
+background-color:#FFFFFF;
+}
+
+@media only screen and (max-width: 540px) {
+div {margin:0 auto 10px auto; height:200px; width:auto}
+
+}
+
+/*BOTON BACK TO TOP*/
+.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	/*direction:ltr;*/
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: url(https://rawgit.com/akidaniel/darezd/gh-pages/imagenes/ICONOS/BT_TOP.svg) no-repeat center 43%;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<body bgcolor="gray">
+<div class="button" style="background-color:#049EA4;"><a href="#01"><h1>01</h1></a>
+</div>
+<div style="background-color: #F1FB00"><a href="#02"><h1>02</h1></a>
+</div>
+<div style="background-color: #1779F0;"><a href="#03"><h1>03</h1></a>
+</div>
+<div style="background-color: #FF00CF;"><a href="#04"><h1>04</h1></a>
+</div>
+<div style="background-color: #FFA200;"><a href="#05"><h1>05</h1></a>
+</div>
+<div style="background-color: #0042FF;"><a href="#06"><h1>06</h1></a>
+</div>
+<div style="background-color: #A01CF0;"><a href="#07"><h1>07</h1></a>
+</div>
+<div style="background-color: #0DF186;"><a href="#08"><h1>08</h1></a>
+</div>
+
+
+<div id="01" class="popup"><a href="#"><img src="http://www.ikea.com/gb/en/images/products/pekann%C3%B6t-plant-pot-rattan__0132102_pe286857_s4.jpg" alt="01"></a></div>
+
+<div id="02" class="popup"><a href="#"><img src="http://www.ikea.com/gb/en/images/products/or%C3%A4dd-plant-pot-in-outdoor-beige__0108864_pe258535_s4.jpg" alt="02"></a></div>
+
+<div id="03" class="popup"><a href="#"><img src="http://www.ikea.com/gb/en/images/products/socker-plant-pot-in-outdoor-galvanised__0107648_pe257427_s4.jpg" alt="03"></a></div>
+
+<div id="04" class="popup"><a href="#"><img src="http://www.ikea.com/us/en/images/products/huson-plant-pot__12045_PE089408_S4.JPG" alt="04"></a></div>
+
+<div id="05" class="popup"><a href="#"><img src="http://www.ikea.com/gb/en/images/products/ingef%C3%A4ra-plant-pot-with-saucer-outdoor-terracotta__0313254_pe513840_s4.jpg" alt="05"></a></div>
+
+<div id="06" class="popup"><a href="#"><img src="http://www.ikea.com/us/en/images/products/ragkorn-plant-pot__0134053_PE289885_S4.JPG" alt="06"></a></div>
+
+<div id="07" class="popup"><a href="#"><img src="http://www.ikea.com/gb/en/images/products/skurar-plant-pot-in-outdoor-off-white__0114580_pe267097_s4.jpg" alt="07"></a></div>
+
+<div id="08" class="popup"><a href="#"><img src="http://www.ikea.com/us/en/images/products/hasselnot-plant-pot__0119553_PE275934_S4.JPG" alt="08"></a></div>
+
+
+<script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+</script>
+</body>
+
+
+</body>
+</html>
