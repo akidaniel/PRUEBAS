@@ -464,11 +464,11 @@ img.emoji {
   width: 100%;
   max-width: 600px;
   margin: 4em auto;
-  background: #fff;
+  /*background: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);*/
   border-radius: none; 
   text-align: center;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-  -webkit-transform: translateY(-40px);
+ -webkit-transform: translateY(-40px);
   -moz-transform: translateY(-40px);
   -ms-transform: translateY(-40px);
   -o-transform: translateY(-40px);
@@ -483,28 +483,18 @@ img.emoji {
   transition-duration: 0.3s;
 }
 .bts-popup-container img {
-  padding: 5% 0 0 0;
+ /* padding: 5% 0 0 0;*/
 }
-.bts-popup-container p {
+/*.bts-popup-container p {
 	color: red;
   padding: 10px 40px;
-}
-.bts-popup-container .bts-popup-button {
+}*/
+/*.bts-popup-container .bts-popup-button {
   padding: 5px 25px;
   border: 2px solid red;
 	display: inline-block;
   margin-bottom: 10px;
 }
-
-.bts-popup-container a {
-  color: red;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-
-
-
 
 
 .bts-popup-container .bts-popup-close {
@@ -514,7 +504,7 @@ img.emoji {
   width: 30px;
   height: 30px;
 }
-.bts-popup-container .bts-popup-close::before, .bts-popup-container .bts-popup-close::after {
+/*.bts-popup-container .bts-popup-close::before, .bts-popup-container .bts-popup-close::after {
   content: '';
   position: absolute;
   top: 12px;
@@ -545,34 +535,21 @@ img.emoji {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
-}
+}*/
 
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: #06D85F;
-}
 
-.bts-popup-container .close {
+.bts-popup .close {
   position: absolute;
   top: 0%;
   right: 2%;
   transition: all 0.2s;
-  font-size: 30px;
+  font-size: 4em;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #FC621A;
 }
-.bts-popup-container .close:hover {
-  color: #06D85F;
+.bts-popup .close:hover {
+  color: #FFF;
 }
 @media only screen and (min-width: 1170px) {
   .bts-popup-container {
@@ -646,12 +623,14 @@ img.emoji {
     
 <!--POPUP-->    
     <div class="bts-popup" role="alert">
+               <a href="#page" class="close">&times;</a>
+
     <div class="bts-popup-container">
-      <img src="http://i961.photobucket.com/albums/ae96/vivadaniel/BLACK_FRIDENT_THEL2017LAB_zpss471mpfq.jpg" width="100%">
+
+     <a href="#"> <img src="https://raw.githubusercontent.com/akidaniel/dent-thel/gh-pages/IMG/BLACK_FRIDENT_THEL2017LAB.png" width="100%"></a>
 			<!--	<div class="bts-popup-button">
 		       <a href="#0">Enter</a>
          </div>-->
-       <a href="#0" class="close">&times;</a>
     </div>
   </div>
   
@@ -670,7 +649,7 @@ jQuery(document).ready(function($){
 	
 	//close popup
 	$('.bts-popup').on('click', function(event){
-		if( $(event.target).is('.bts-popup-close') || $(event.target).is('.bts-popup') ) {
+		if( $(event.target).is('.close') || $(event.target).is('.bts-popup') ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
 		}
